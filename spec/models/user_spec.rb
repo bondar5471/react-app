@@ -35,14 +35,14 @@ RSpec.describe User, type: :model do
     end
   end
   describe '#student?' do
-    context "when has student role" do
+    context 'when has student role' do
       user = FactoryBot.create(:user)
       user.add_role('student')
-      it 'return true'do
+      it 'return true' do
         expect(user.student?).to eq(true)
       end
     end
-    context "when has not student role" do
+    context 'when has not student role' do
       user = FactoryBot.create(:user)
       it 'return false' do
         expect(user.student?).to eq(false)
@@ -50,14 +50,14 @@ RSpec.describe User, type: :model do
     end
   end
   describe '#teacher?' do
-    context "when has teacher role" do
+    context 'when has teacher role' do
       user = FactoryBot.create(:user)
       user.add_role('teacher')
-      it 'return true'do
+      it 'return true' do
         expect(user.teacher?).to eq(true)
       end
     end
-    context "when has not teacher role" do
+    context 'when has not teacher role' do
       user = FactoryBot.create(:user)
       it 'return false' do
         expect(user.teacher?).to eq(false)
@@ -65,14 +65,14 @@ RSpec.describe User, type: :model do
     end
   end
   describe '#custodian?' do
-    context "when has custodian role" do
+    context 'when has custodian role' do
       user = FactoryBot.create(:user)
       user.add_role('custodian')
-      it 'return true'do
+      it 'return true' do
         expect(user.custodian?).to eq(true)
       end
     end
-    context "when has not custodian role" do
+    context 'when has not custodian role' do
       user = FactoryBot.create(:user)
       it 'return false' do
         expect(user.custodian?).to eq(false)
@@ -80,14 +80,14 @@ RSpec.describe User, type: :model do
     end
   end
   describe '#administrator?' do
-    context "when has administrator role" do
+    context 'when has administrator role' do
       user = FactoryBot.create(:user)
       user.add_role('administrator')
-      it 'return true'do
+      it 'return true' do
         expect(user.administrator?).to eq(true)
       end
     end
-    context "when has not administrator role" do
+    context 'when has not administrator role' do
       user = FactoryBot.create(:user)
       it 'return false' do
         expect(user.administrator?).to eq(false)
