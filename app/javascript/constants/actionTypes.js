@@ -1,0 +1,3 @@
+export const SET_SCHOOL_TITLE = 'SET_SCHOOL_TITLE';
+
+export const FETCH_SCHOOL_DATA = 'FETCH_SCHOOL_DATA';
