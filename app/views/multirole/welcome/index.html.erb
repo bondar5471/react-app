@@ -1,0 +1,7 @@
+<ul>
+  <li>
+    <% current_user.roles.each do |role| %>
+    <%= link_to role, send("#{role}_root_path") %>
+    <%end%>
+  </li>
+</ul>

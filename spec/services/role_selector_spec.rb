@@ -4,9 +4,9 @@ require 'rails_helper'
 
 RSpec.describe RoleSelector do
   describe '#call' do
-    it 'broadcast multi_role if there are several roles' do
+    it 'broadcast multirole if there are several roles' do
       service = RoleSelector.new
-      expect { service.call(%w[admin teacher]) }.to broadcast(:multi_role)
+      expect { service.call(%w[admin teacher]) }.to broadcast(:multirole)
     end
     it 'broadcast none rhere are not loles' do
       service = RoleSelector.new

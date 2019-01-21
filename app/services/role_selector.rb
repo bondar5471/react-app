@@ -4,7 +4,7 @@ class RoleSelector
   include Wisper::Publisher
   def call(roles)
     if roles.size > 1
-      broadcast(:multi_role)
+      broadcast(:multirole)
     elsif roles.size.zero?
       broadcast(:none)
     else

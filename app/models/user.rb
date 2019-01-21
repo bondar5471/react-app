@@ -7,7 +7,7 @@ class User < ApplicationRecord
     student
     teacher
     custodian
-    administrator
+    admin
   ].freeze
   serialize :roles, Array
   def full_name
@@ -37,7 +37,11 @@ class User < ApplicationRecord
     roles.include?('custodian')
   end
 
-  def administrator?
-    roles.include?('administrator')
+  def admin?
+    roles.include?('admin')
+  end
+  
+  def multirole?
+    roles.size > 1
   end
 end
